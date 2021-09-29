@@ -1,0 +1,15 @@
+.bd-navbar {
+    padding: .75rem 0;
+    background-color: #587ec5;
+    color: white;
+}
+
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.container-main-city {
+    border: black 1px solid;
+}
