@@ -60,7 +60,7 @@ function renderHistory (event) {
   elementDiv.appendChild(historyRow);
   cityHistory.append(elementDiv);
   
-  getLatLon();
+  getLatLon(cityInput.value);
   
 
  
@@ -70,8 +70,8 @@ searchButton.addEventListener('click', renderHistory);
 
 
 
-function getLatLon() {    
-    let cityName = cityInput.value;    
+function getLatLon(cityName) {    
+    // let cityName = cityInput.value;    
     let APIkey = '22a3324a817052e3ecb8f5b95307e41b'
     // fetch request gets a list of all the repos for the node.js organization
     var requestUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIkey}`
@@ -174,3 +174,5 @@ function getLatLon() {
     };
     cityInput.value="";
   };
+
+  getLatLon(citySpan.textContent);
